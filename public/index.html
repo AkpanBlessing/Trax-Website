@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trax Investment</title>
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="/css/master.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css">
     <script defer src="all.js"></script>
 </head>
 <body>
@@ -45,13 +48,13 @@
 
                                                       <!-- NAV AND COVER PAGE container  -->
   <div class="" id="nav-cover-container">
-  <header class="tw-sticky tw-h-24 tw-top-0">
+  <header class="tw-sticky tw-h-24 tw-top-0 tw-z-50">
     <nav class="nav-bg">
-            <div class="tw-mx-16 lg:tw-mx-24">
+            <div class="tw-mx-16 lg:tw-mx-24 pad-scroll">
             <div class="tw-flex tw-justify-between tw-items-center tw-h-24 tw-sticky">
                                           <!-- LOGO -->
               <div class="tw-flex tw-items-center" id="logo-wrap">
-                <a href="#" class="">
+                <a href="#" class="tw-no-underline">
                   <div class="tw-relative tw-h-24 tw-w-24" id="logo-symbol">
                     <div class="bar bar1" id="bar-1"></div>
                     <div class="bar bar2" id="bar-2"></div>
@@ -64,45 +67,79 @@
                 <div class="txt-color" id="logo-text">
                   <a href="#">
                     <h1 class="tw-text-4xl tw-font-bold tw-ml-2">TRAX</h1>
-                    <h6 class="tw-text-sm">Investment Limited </h6>
+                    <h6 class="tw-text-sm">Investment Limited</h6>
                   </a>
                 </div>
               </div>
 
                                         <!-- LINKS -->
                 <div class="tw-text-md" id="list-wrap tw-h-full">
-                  <ul class="tw-hidden md:tw-flex tw-items-center tw-h-24">
+                  <ul class="tw-hidden mm:tw-flex tw-items-center tw-h-24">
                     <li class="tw-center tw-px-2 lg:tw-px-4 tw-my-0 nav-li"><a href="#" class="nav-a tw-text-md" id="home">Home</a></li>
                     <li class="tw-center tw-px-2 lg:tw-px-4 nav-li"><a href="#" class="nav-a tw-text-md">About us</a></li>
                     <li class="tw-center tw-px-2 lg:tw-px-4 nav-li"><a href="#" class="nav-a tw-text-md">Partners</a></li>
                     <li class="tw-center tw-px-2 lg:tw-px-4 nav-li"><a href="#" class="nav-a tw-text-md">services</a></li>
                     <li class="tw-center tw-px-2 lg:tw-px-4 nav-li"><a href="#" class="nav-a tw-text-md">Shop with us</a></li>
-                    <span class="tw-ml-4 tw-cursor-pointer" id="search-icon"><i class="fas fa-search"></i></span>
+                    <div class="tw-ml-4 tw-cursor-pointer search-box">
+                      <input type="text" name="" value="" class="search-txt" placeholder="search" aria-label="search">
+                      <a href="##" class="search-btn search-icon" id="search-icon"><i class="fas fa-search" aria-label="submit search"></i></a>
+                    </div>
                   </ul>
-                  <span class="md:tw-hidden tw-cursor-pointer" id="menu-open"><i class="fas fa-bars fa-2x"></i></span>
+                  <span class="mm:tw-hidden tw-cursor-pointer" id="menu-open"><i class="fas fa-bars tw-w-6 tw-h-6"></i></span>
                 </div>
             </div>
                                     <!-- NAV MOBILE VIEW -->
-                <div class="tw-text-md tw-hidden" id="mobile-list-wrap">
+                <div class="tw-text-md tw-hidden tw-mx-2" id="mobile-list-wrap">
                    <ul class="tw-text-gray-400 tw-mt-8">
-                     <span class="tw-m-6 tw-cursor-pointer hover:tw-text-white" id="menu-close"><i class="fas fa-times fa-2x"></i></span>
-                     <li class="tw-center tw-px-6 tw-py-4 tw-mt-6 tw-border-b tw-border-t tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">Home</a></li>
-                     <li ctw-lass="tw-center tw-px-6 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">About us</a></li>
-                     <li class="tw-center tw-px-6 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">Partners</a></li>
-                     <li class="tw-center tw-px-6 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">services</a></li>
-                     <li class="tw-center tw-px-6 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 tw-mb-12 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">Shop with us</a></li>
+                     <span class="tw-m-6 tw-cursor-pointer hover:tw-text-white" id="menu-close"><i class="fas fa-times tw-h-6 tw-w-6"></i></span>
+                     <li class="tw-center tw-px-4 tw-py-4 tw-mt-6 tw-border-b tw-border-t tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">Home</a></li>
+                     <li class="tw-center tw-px-4 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">About us</a></li>
+                     <li class="tw-center tw-px-4 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">Partners</a></li>
+                     <li class="tw-center tw-px-4 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">services</a></li>
+                     <li class="tw-center tw-px-4 tw-py-4 tw-border-b tw-border-gray-700 tw-mx-4 tw-mb-12 hover:tw-bg-gray-900 hover:tw-text-white hover:tw-font-bold"><a href="#">Shop with us</a></li>
                    </ul>
-                   <span class="tw-ml-6"><input type="search" placeholder="search" name="" value="" class="tw-border-b-2 tw-border-gray-600">
-                     <i class="fas fa-search tw-text-gray-400 hover:tw-text-white"></i></span>
+                   <div class=" tw-cursor-pointer search-box-2">
+                     <a href="##" class="search-btn-2"  id="search-icon-2"><i class="fas fa-search" aria-label="submit search"></i></a>
+                     <input type="text" name="" value="" class="search-txt-2 tw-text-md tw-font-light" placeholder="search" aria-label="search">
+                   </div>
                 </div>
             </div>
           </nav>
 </header>
+                                                                <!-- COVER SECTION -->
 
+
+        <section id="cover">
+            <div class="tw-grid md:tw-grid-cols-2 md:tw-mt-24 tw-gap-10 tw-mx-16 lg:tw-mx-24">
+              <div class="" id="slidder-container">
+                <div class="slidder tw-hidden md:tw-block" style="width:45vw; height:60vh;">
+                  <div class=""><img class="tw-w-full tw-h-full"src="images/laptop.png" alt="laptop"></div>
+                  <div class=""><img class="tw-w-full tw-h-full"src="images/samsung.png" alt="printer"></div>
+                  <div class=""><img class="tw-w-full tw-h-full"src="images/spec.png" alt="printer"></div>
+                  <div class=""><img class="tw-w-full tw-h-full"src="images/HP-Envy-Desktop.png" alt="printer"></div>
+                </div>
+              </div>
+              <div class="md:tw-ml-14 tw-pt-4 mm:tw-pt-16" id="caption">
+                <h1 class="tw-mb-6 tw-text-4xl tw-font-semibold cover-text"><span class="tw-text-gray-400">L</span>orem ipsum</h1>
+                <p class="tw-text-md cover-text tw-mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing aliqua.
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                <button class="btn tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded">Read More</button>
+              </div>
+            </div>
+          </section>
 
 </div> <!-- end of nav-cover-container -->
+<main>
+  <section>
+    <div class="tw-bg-gray-200" style="height:60vh">
+
+    </div>
+  </section>
+</main>
 
 <script src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<!-- <script src="bootstrap/js/bootstrap.min.js" charset="utf-8"></script> -->
 <script src="index.js" charset="utf-8"></script>
 
 </body>
