@@ -1,7 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.custom-Social-icons{
-  @apply tw-text-center tw-ml-2 tw-h-8 tw-w-8;
-}

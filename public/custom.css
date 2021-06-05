@@ -1,17 +1,25 @@
 
-#nav-cover-container{
-  height: 100vh;
+*, body{
+  padding: 0;
+  margin: 0;
+}
+#nav-cover-container {
   background-image: url(images/page-turner-1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
 }
-
- @media screen and (max-width: 768px) {
+.mobile-cover{
+  background-image: url(images/10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+ @media screen and (max-width: 939px) {
   #nav-cover-container {
-    background-image: none;
+    background-image: url(images/Endless-Constellation.svg);
     background-color:  #065480;
-    height: 70vh;
+
   }
   .cover-text{
     color:#e8e8e8!important;
@@ -80,13 +88,13 @@
   transform-origin: 500% 68%;
 }
 
-/* nav links */
+/* Mobile nav links */
 #mobile-list-wrap{
   position: absolute;
   top: 0;
   right: 0;
-  width: 20rem;
-  height: 100vh;
+  /* width: 20rem; */
+  height: 95vh;
   background: rgba(0, 0, 0, 0.9);
   color: white
   transition: 0.5s ease;
@@ -283,7 +291,19 @@
 }
 .btn{
   background-color: #065480;
+  outline: none;
 }
 .btn:hover{
   background-color: #086DA6;
+}
+.sign-in-btn{
+  background-color: transparent;
+  border: 1px solid #065480;
+  color: #065480;
+  outline: none;
+}
+.sign-in-btn:hover{
+  background-color: #086DA6;
+  border: 1px solid #086DA6;
+  color: white;
 }

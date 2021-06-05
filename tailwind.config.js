@@ -6,8 +6,18 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-      mm: '940px',
+      mm: '990px',
     },
+    colors: {
+        primary: '#065480',
+        secondary: {
+          100: '#086DA6',
+          200: '#086DA8'
+        }
+      },
+      fontFamily: {
+      nunito: ['Nunito']
+    }
     },
   },
   variants: {

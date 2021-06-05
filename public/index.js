@@ -21,6 +21,7 @@ menuOpen.addEventListener('click', function(){
 
 searchIcon.addEventListener('click', function(){
   searchTxt.focus();
+
 })
 searchIconTwo.addEventListener('click', function(){
   searchTxtTwo.focus();
